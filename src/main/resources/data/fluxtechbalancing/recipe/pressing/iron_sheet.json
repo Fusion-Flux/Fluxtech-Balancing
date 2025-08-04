@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "fluxtechbalancing:double_iron"
+    }
+  ],
+  "results": [
+    {
+      "id": "create:iron_sheet"
+    }
+  ]
+}

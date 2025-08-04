@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "com.fusionflux.fluxtechbalancing.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "create.BoilerDataMixin",
+    "minecraft.ArrowMixin",
+    "minecraft.ManualAttackGoalMixin",
+    "minecraft.RangedAttackGoalMixin",
+    "minecraft.TargetGoalMixin",
+    "minecraft.ZombieAttackGoalMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

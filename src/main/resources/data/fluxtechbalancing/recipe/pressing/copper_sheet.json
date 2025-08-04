@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "fluxtechbalancing:double_copper"
+    }
+  ],
+  "results": [
+    {
+      "id": "create:copper_sheet"
+    }
+  ]
+}

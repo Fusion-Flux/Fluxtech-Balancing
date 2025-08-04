@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "fluxtechbalancing:double_bronze"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_ironworks:bronze_sheet"
+    }
+  ]
+}

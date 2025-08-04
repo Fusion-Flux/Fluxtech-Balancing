@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "fluxtechbalancing:double_brass"
+    }
+  ],
+  "results": [
+    {
+      "id": "create:brass_sheet"
+    }
+  ]
+}

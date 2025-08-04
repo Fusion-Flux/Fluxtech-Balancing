@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "create:andesite_alloy"
+    },
+    "S": {
+      "item": "create:andesite_casing"
+    },
+    "X": {
+      "item": "create:shaft"
+    }
+  },
+  "pattern": [
+    "SXS",
+    "XCX",
+    "SXS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "create:water_wheel"
+  }
+}

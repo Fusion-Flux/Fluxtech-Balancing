@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:diamond"
+    },
+    "C": {
+      "item": "create:brass_casing"
+    },
+    "I": {
+      "item": "create:andesite_alloy"
+    },
+    "W": {
+      "item": "create:railway_casing"
+    }
+  },
+  "pattern": [
+    " A ",
+    "AIA",
+    "WCW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "create:mechanical_drill"
+  }
+}

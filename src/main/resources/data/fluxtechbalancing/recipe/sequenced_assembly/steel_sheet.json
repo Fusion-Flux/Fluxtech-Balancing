@@ -1,0 +1,48 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "tag": "c:ingots/steel"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "create_ironworks:steel_sheet"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "fluxtechbalancing:superheated_steel"
+        },
+        {
+          "type": "fluid_stack",
+          "amount": 500,
+          "fluid": "minecraft:lava"
+        }
+      ],
+      "results": [
+        {
+          "id": "fluxtechbalancing:superheated_steel"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "fluxtechbalancing:superheated_steel"
+        }
+      ],
+      "results": [
+        {
+          "id": "fluxtechbalancing:superheated_steel"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "fluxtechbalancing:superheated_steel"
+  }
+}

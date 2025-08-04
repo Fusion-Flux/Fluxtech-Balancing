@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "fluxtechbalancing:double_steel"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_ironworks:steel_sheet"
+    }
+  ]
+}

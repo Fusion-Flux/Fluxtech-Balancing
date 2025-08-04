@@ -1,0 +1,48 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "tag": "c:ingots/brass"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "create:brass_sheet"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "fluxtechbalancing:superheated_brass"
+        },
+        {
+          "type": "fluid_stack",
+          "amount": 500,
+          "fluid": "minecraft:lava"
+        }
+      ],
+      "results": [
+        {
+          "id": "fluxtechbalancing:superheated_brass"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "fluxtechbalancing:superheated_brass"
+        }
+      ],
+      "results": [
+        {
+          "id": "fluxtechbalancing:superheated_brass"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "fluxtechbalancing:superheated_brass"
+  }
+}

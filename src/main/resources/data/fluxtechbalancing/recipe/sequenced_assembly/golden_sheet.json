@@ -1,0 +1,48 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "tag": "c:ingots/gold"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "create:golden_sheet"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "fluxtechbalancing:superheated_gold"
+        },
+        {
+          "type": "fluid_stack",
+          "amount": 500,
+          "fluid": "minecraft:lava"
+        }
+      ],
+      "results": [
+        {
+          "id": "fluxtechbalancing:superheated_gold"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "fluxtechbalancing:superheated_gold"
+        }
+      ],
+      "results": [
+        {
+          "id": "fluxtechbalancing:superheated_gold"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "fluxtechbalancing:superheated_gold"
+  }
+}

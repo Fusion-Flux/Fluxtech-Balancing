@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "fluxtechbalancing:double_gold"
+    }
+  ],
+  "results": [
+    {
+      "id": "create:golden_sheet"
+    }
+  ]
+}

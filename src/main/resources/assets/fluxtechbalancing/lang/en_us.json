@@ -1,0 +1,32 @@
+{
+  "itemGroup.fluxtechbalancing": "Example Mod Tab",
+  "block.fluxtechbalancing.example_block": "Example Block",
+  "item.fluxtechbalancing.double_iron": "Double Iron",
+  "item.fluxtechbalancing.superheated_iron": "Superheated Iron",
+
+  "item.fluxtechbalancing.double_brass": "Double Brass",
+  "item.fluxtechbalancing.superheated_brass": "Superheated Brass",
+
+  "item.fluxtechbalancing.double_gold": "Double Gold",
+  "item.fluxtechbalancing.superheated_gold": "Superheated Gold",
+
+  "item.fluxtechbalancing.double_copper": "Double Copper",
+  "item.fluxtechbalancing.superheated_copper": "Superheated Copper",
+
+  "item.fluxtechbalancing.double_tin": "Double Tin",
+  "item.fluxtechbalancing.superheated_tin": "Superheated Tin",
+
+  "item.fluxtechbalancing.double_steel": "Double Steel",
+  "item.fluxtechbalancing.superheated_steel": "Superheated Steel",
+
+  "item.fluxtechbalancing.double_bronze": "Double Bronze",
+  "item.fluxtechbalancing.superheated_bronze": "Superheated Bronze",
+
+  "fluxtechbalancing.configuration.title": "Fluxtech Balancing Configs",
+  "fluxtechbalancing.configuration.section.fluxtechbalancing.common.toml": "Fluxtech Balancing Configs",
+  "fluxtechbalancing.configuration.section.fluxtechbalancing.common.toml.title": "Fluxtech Balancing Configs",
+  "fluxtechbalancing.configuration.items": "Item List",
+  "fluxtechbalancing.configuration.logDirtBlock": "Log Dirt Block",
+  "fluxtechbalancing.configuration.magicNumberIntroduction": "Magic Number Text",
+  "fluxtechbalancing.configuration.magicNumber": "Magic Number"
+}

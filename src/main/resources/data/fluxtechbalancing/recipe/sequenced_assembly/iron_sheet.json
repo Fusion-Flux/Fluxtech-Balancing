@@ -1,0 +1,48 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "tag": "c:ingots/iron"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "create:iron_sheet"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "fluxtechbalancing:superheated_iron"
+        },
+        {
+          "type": "fluid_stack",
+          "amount": 500,
+          "fluid": "minecraft:lava"
+        }
+      ],
+      "results": [
+        {
+          "id": "fluxtechbalancing:superheated_iron"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "fluxtechbalancing:superheated_iron"
+        }
+      ],
+      "results": [
+        {
+          "id": "fluxtechbalancing:superheated_iron"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "fluxtechbalancing:superheated_iron"
+  }
+}

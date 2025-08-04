@@ -1,0 +1,48 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "tag": "c:ingots/copper"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "create:copper_sheet"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "fluxtechbalancing:superheated_copper"
+        },
+        {
+          "type": "fluid_stack",
+          "amount": 500,
+          "fluid": "minecraft:lava"
+        }
+      ],
+      "results": [
+        {
+          "id": "fluxtechbalancing:superheated_copper"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "fluxtechbalancing:superheated_copper"
+        }
+      ],
+      "results": [
+        {
+          "id": "fluxtechbalancing:superheated_copper"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "fluxtechbalancing:superheated_copper"
+  }
+}

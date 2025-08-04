@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "tag": "c:ingots/bronze"
+    },
+    {
+      "tag": "c:ingots/bronze"
+    }
+  ],
+  "results": [
+    {
+      "id": "fluxtechbalancing:double_bronze",
+      "count": 1
+    }
+  ]
+}

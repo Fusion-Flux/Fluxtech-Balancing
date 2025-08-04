@@ -1,0 +1,38 @@
+{
+  "pack": {
+    "description": "Recipe Removal",
+    "pack_format": 71
+  },
+  "filter": {
+    "block": [
+      {
+        "namespace": "create",
+        "path": "recipe/pressing/gold_ingot.json"
+      },
+      {
+        "namespace": "create",
+        "path": "recipe/pressing/iron_ingot.json"
+      },
+      {
+        "namespace": "create",
+        "path": "recipe/pressing/brass_ingot.json"
+      },
+      {
+        "namespace": "create",
+        "path": "recipe/pressing/copper_ingot.json"
+      },
+      {
+        "namespace": "create_ironworks",
+        "path": "recipe/materials/plates/tin_sheet.json"
+      },
+      {
+        "namespace": "create_ironworks",
+        "path": "recipe/materials/plates/bronze_sheet.json"
+      },
+      {
+        "namespace": "create_ironworks",
+        "path": "recipe/materials/plates/steel_sheet.json"
+      }
+    ]
+  }
+}
