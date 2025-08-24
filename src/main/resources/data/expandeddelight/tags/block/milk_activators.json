@@ -1,0 +1,36 @@
+{
+  "values": [
+    "biomesoplenty:glowshroom",
+    "biomesoplenty:toadstool",
+    "natures_spirit:shiitake_mushroom",
+    "chipped:bulbed_brown_mushroom",
+    "chipped:button_brown_mushroom",
+    "chipped:clustered_brown_mushroom",
+    "chipped:double_brown_mushroom",
+    "chipped:franken_brown_mushroom",
+    "chipped:hooded_brown_mushroom",
+    "chipped:micro_brown_mushroom",
+    "chipped:mini_brown_mushroom",
+    "chipped:brown_mushroom_bulb",
+    "chipped:brown_mushroom_bushel",
+    "chipped:brown_mushroom_cluster",
+    "chipped:brown_mushroom_trio",
+    "chipped:umbrella_brown_mushroom",
+    "chipped:wicked_brown_mushroom",
+
+    "chipped:bulbed_red_mushroom",
+    "chipped:button_red_mushroom",
+    "chipped:clustered_red_mushroom",
+    "chipped:double_red_mushroom",
+    "chipped:franken_red_mushroom",
+    "chipped:hooded_red_mushroom",
+    "chipped:micro_red_mushroom",
+    "chipped:mini_red_mushroom",
+    "chipped:red_mushroom_bulb",
+    "chipped:red_mushroom_bushel",
+    "chipped:red_mushroom_cluster",
+    "chipped:red_mushroom_trio",
+    "chipped:umbrella_red_mushroom",
+    "chipped:wicked_red_mushroom"
+  ]
+}

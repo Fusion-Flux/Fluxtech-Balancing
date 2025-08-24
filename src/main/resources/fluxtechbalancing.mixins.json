@@ -4,11 +4,14 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "create.BoilerDataMixin",
+    "create.PotionEffectHandlerAccessor",
     "minecraft.ArrowMixin",
+    "minecraft.BlazeMixin",
     "minecraft.ManualAttackGoalMixin",
+    "minecraft.PlayerMixin",
     "minecraft.RangedAttackGoalMixin",
     "minecraft.TargetGoalMixin",
-    "minecraft.ZombieAttackGoalMixin"
+    "sophisticatedcore.TankUpgradeWrapperMixin"
   ],
   "injectors": {
     "defaultRequire": 1

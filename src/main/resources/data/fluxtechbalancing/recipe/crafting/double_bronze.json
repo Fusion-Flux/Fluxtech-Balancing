@@ -5,14 +5,16 @@
       "modid": "create_ironworks"
     }
   ],
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "tag": "c:ingots/bronze"
-    },
-    {
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
       "tag": "c:ingots/bronze"
     }
+  },
+  "pattern": [
+    "A",
+    "A"
   ],
   "result": {
     "id": "fluxtechbalancing:double_bronze",

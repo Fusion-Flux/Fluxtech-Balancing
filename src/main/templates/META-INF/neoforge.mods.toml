@@ -96,10 +96,32 @@ side="BOTH"
 
 [[dependencies.${mod_id}]]
 modId="create_ironworks"
-type="required"
+type="optional"
 versionRange="[3.8.0,4.0.0)"
 ordering="AFTER"
 side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="expandeddelight"
+type="optional"
+versionRange="[0.0.0,1.5.0.0)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="farmersexpanse"
+type="optional"
+versionRange="[0.0.0,1.0.0)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="createfood"
+type="optional"
+versionRange="[1.9.0,2.1.0)"
+ordering="AFTER"
+side="BOTH"
+
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
 # stop your mod loading on the server for example.

@@ -1,6 +1,6 @@
 {
-  "itemGroup.fluxtechbalancing": "Example Mod Tab",
-  "block.fluxtechbalancing.example_block": "Example Block",
+  "itemGroup.fluxtechbalancing": "Fluxtech Balancing",
+
   "item.fluxtechbalancing.double_iron": "Double Iron",
   "item.fluxtechbalancing.superheated_iron": "Superheated Iron",
 
@@ -21,6 +21,31 @@
 
   "item.fluxtechbalancing.double_bronze": "Double Bronze",
   "item.fluxtechbalancing.superheated_bronze": "Superheated Bronze",
+
+  "item.fluxtechbalancing.resitem": "Totem Of Resurrection",
+
+  "fluxtechbalancing.resitemlore" : "When dropped on the ground it can bring ghosts back to life.",
+
+  "item.fluxtechbalancing.iron_excavator": "Iron Excavator",
+  "item.fluxtechbalancing.netherite_excavator": "Netherite Excavator",
+  "item.fluxtechbalancing.gold_excavator": "Gold Excavator",
+  "item.fluxtechbalancing.diamond_excavator": "Diamond Excavator",
+  "item.fluxtechbalancing.copper_excavator": "Copper Excavator",
+  "item.fluxtechbalancing.bronze_excavator": "Bronze Excavator",
+  "item.fluxtechbalancing.brass_excavator": "Brass Excavator",
+  "item.fluxtechbalancing.steel_excavator": "Steel Excavator",
+
+  "item.fluxtechbalancing.steel_excavator.description_1": "§8Can serve as a base for netherite upgrade.",
+  "item.fluxtechbalancing.steel_excavator.description_0": "§8Good substitute for diamond tools.",
+
+  "item.fluxtechbalancing.bronze_excavator.description_0": "§8While not as fast as iron for mining,",
+  "item.fluxtechbalancing.bronze_excavator.description_1": "§8bronze tools have higher durability.",
+
+  "item.fluxtechbalancing.brass_excavator.description_1": "§8and higher enchantability than iron.",
+  "item.fluxtechbalancing.brass_excavator.description_0": "§8Brass tools have better mining speed",
+
+  "item.fluxtechbalancing.copper_excavator.description_1": "§8Ideal for the early game.",
+  "item.fluxtechbalancing.copper_excavator.description_0": "§8Cheap and disposable tools.",
 
   "fluxtechbalancing.configuration.title": "Fluxtech Balancing Configs",
   "fluxtechbalancing.configuration.section.fluxtechbalancing.common.toml": "Fluxtech Balancing Configs",

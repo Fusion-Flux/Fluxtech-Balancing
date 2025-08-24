@@ -1,12 +1,14 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "tag": "c:ingots/iron"
-    },
-    {
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
       "tag": "c:ingots/iron"
     }
+  },
+  "pattern": [
+    "A",
+    "A"
   ],
   "result": {
     "id": "fluxtechbalancing:double_iron",

@@ -1,12 +1,14 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "tag": "c:ingots/brass"
-    },
-    {
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
       "tag": "c:ingots/brass"
     }
+  },
+  "pattern": [
+    "A",
+    "A"
   ],
   "result": {
     "id": "fluxtechbalancing:double_brass",

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "farmersdelight:beef_patty"
+    },
+    {
+      "tag": "c:foods/cheese"
+    },
+    {
+      "item": "farmersdelight:cooked_bacon"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersexpanse:bacon_cheeseburger"
+  }
+}

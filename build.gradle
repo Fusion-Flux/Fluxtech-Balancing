@@ -21,6 +21,11 @@ repositories {
     // Add here additional repositories if required by some of the dependencies below.
     maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
     maven { url = "https://maven.ithundxr.dev/snapshots" } // Registrate
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
+    maven { url = "https://maven.uuid.gg/releases" }
 }
 
 base {
@@ -119,6 +124,10 @@ dependencies {
     compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
     runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
     implementation("com.tterrag.registrate:Registrate:${registrate_version}")
+    implementation "maven.modrinth:protomanlys-weather:0.15.3-alpha"
+    implementation "maven.modrinth:create-ironworks:3.9.0"
+    implementation "sophisticatedcore:sophisticatedcore:1.21.1-1.3.64.1090"
+    //implementation("com.robinfrt.createironworks:create_ironworks-3.9.0-neoforge-1.21.1")
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"

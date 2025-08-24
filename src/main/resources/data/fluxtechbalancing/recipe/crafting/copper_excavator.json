@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "c:ingots/copper"
+    },
+    "/": {
+      "item" : "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " A ",
+    "A/A",
+    " / "
+  ],
+  "result": {
+    "id": "fluxtechbalancing:copper_excavator",
+    "count": 1
+  }
+}

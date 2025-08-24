@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "fluxtechbalancing:iron_excavator",
+    "fluxtechbalancing:golden_excavator",
+    "fluxtechbalancing:copper_excavator",
+    "fluxtechbalancing:diamond_excavator",
+    "fluxtechbalancing:netherite_excavator",
+    "fluxtechbalancing:brass_excavator",
+    "fluxtechbalancing:bronze_excavator",
+    "fluxtechbalancing:steel_excavator"
+  ]
+}

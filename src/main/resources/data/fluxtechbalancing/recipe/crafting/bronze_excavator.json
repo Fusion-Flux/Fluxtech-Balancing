@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "c:ingots/bronze"
+    },
+    "/": {
+      "item" : "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " A ",
+    "A/A",
+    " / "
+  ],
+  "result": {
+    "id": "fluxtechbalancing:bronze_excavator",
+    "count": 1
+  }
+}

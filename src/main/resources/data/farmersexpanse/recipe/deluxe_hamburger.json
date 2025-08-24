@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "farmersdelight:beef_patty"
+    },
+    {
+      "item": "farmersdelight:tomato"
+    },
+    {
+      "tag": "c:foods/leafy_green"
+    },
+    {
+      "item": "farmersdelight:onion"
+    },
+    {
+      "tag": "c:foods/cheese"
+    },
+    {
+      "item": "farmersdelight:cooked_bacon"
+    },
+    {
+      "tag": "farmersexpanse:condiments"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersexpanse:deluxe_hamburger"
+  }
+}
