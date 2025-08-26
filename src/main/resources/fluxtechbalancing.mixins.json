@@ -11,7 +11,8 @@
     "minecraft.PlayerMixin",
     "minecraft.RangedAttackGoalMixin",
     "minecraft.TargetGoalMixin",
-    "sophisticatedcore.TankUpgradeWrapperMixin"
+    "sophisticatedcore.TankUpgradeWrapperMixin",
+    "sophisticatedcore.TankUpgradeWrapperMixin$TankComponentItemHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
