@@ -11,12 +11,12 @@ import java.util.stream.Collectors;
 
 @EventBusSubscriber
 public class EventHandler {
-   // @SubscribeEvent
-   // public static void modsFinished(FMLCommonSetupEvent event){
-   //   String json = new Gson().toJson(BuiltInRegistries.BLOCK
-   //           .keySet()
-   //           .stream().map(ResourceLocation::toString)
-   //           .collect(Collectors.toSet()));
-   //   System.out.println(json);
-   // }
+    @SubscribeEvent
+    public static void modsFinished(FMLCommonSetupEvent event){
+      //String json = new Gson().toJson(BuiltInRegistries.BLOCK
+      //        .keySet()
+      //        .stream().map(ResourceLocation::toString)
+      //        .collect(Collectors.toSet()));
+      //System.out.println(json);
+    }
 }
