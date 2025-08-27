@@ -1,37 +1,23 @@
 package com.fusionflux.fluxtechbalancing.mixin.sophisticatedcore;
 
 import com.fusionflux.fluxtechbalancing.util.PotionHelper;
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.simibubi.create.content.fluids.potion.PotionFluidHandler;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
-import net.neoforged.neoforge.items.ItemStackHandler;
-import net.p3pp3rf1y.sophisticatedcore.api.IStorageWrapper;
-import net.p3pp3rf1y.sophisticatedcore.upgrades.UpgradeWrapperBase;
-import net.p3pp3rf1y.sophisticatedcore.upgrades.tank.TankUpgradeItem;
 import net.p3pp3rf1y.sophisticatedcore.upgrades.tank.TankUpgradeWrapper;
-import org.spongepowered.asm.mixin.Debug;
+import net.p3pp3rf1y.sophisticatedcore.upgrades.tank.TankUpgradeWrapper.TankComponentItemHandler;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import java.util.function.Consumer;
-
 @Mixin(TankUpgradeWrapper.class)
-@Debug(export = true)
-public abstract class TankUpgradeWrapperMixin extends UpgradeWrapperBase<TankUpgradeWrapper, TankUpgradeItem> {
-
-
-    @Shadow private long cooldownTime;
-
+public abstract class TankUpgradeWrapperMixin {
     @Shadow @Final private TankUpgradeWrapper.TankComponentItemHandler inventory;
 
     @Shadow private FluidStack contents;
@@ -42,59 +28,81 @@ public abstract class TankUpgradeWrapperMixin extends UpgradeWrapperBase<TankUpg
 
     @Shadow public abstract FluidStack drain(int maxDrain, IFluidHandler.FluidAction action, boolean ignoreInOutLimit);
 
-    protected TankUpgradeWrapperMixin(IStorageWrapper storageWrapper, ItemStack upgrade, Consumer<ItemStack> upgradeSaveHandler) {
-        super(storageWrapper, upgrade, upgradeSaveHandler);
-    }
+	@Shadow
+	@Final
+	public static int INPUT_SLOT;
 
-    @Inject(method = "tick(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V",
-            at = @At("TAIL"), remap = false)
-    public void injectTick(Entity entity, Level world, BlockPos pos, CallbackInfo ci) {
-        if (world.getGameTime() >= cooldownTime) {
-            ItemStack inputStack = inventory.getStackInSlot(0);
-            ItemStack outputStack = inventory.getStackInSlot(1);
-            boolean didSomething = false;
+	@Shadow
+	@Final
+	public static int OUTPUT_SLOT;
 
-            if (PotionFluidHandler.isPotionItem(inputStack)) {
-                FluidStack fluid = PotionFluidHandler.getFluidFromPotionItem(inputStack);
+	@Shadow
+	@Final
+	public static int OUTPUT_RESULT_SLOT;
 
-                if (contents.isEmpty() || contents.isFluidEqual(fluid) &&
-                        getTankCapacity() - contents.getAmount() >= fluid.getAmount()) {
-                    inputStack.shrink(1);
-                    inventory.setStackInSlot(0, new ItemStack(Items.GLASS_BOTTLE));
+	@Shadow
+	@Final
+	public static int INPUT_RESULT_SLOT;
 
-                    fill(fluid, IFluidHandler.FluidAction.EXECUTE, false);
+	@ModifyExpressionValue(method = "tick(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V", at = @At(value = "INVOKE", target = "Lnet/p3pp3rf1y/sophisticatedcore/upgrades/tank/TankUpgradeWrapper;tryFilling(Lnet/minecraft/world/item/ItemStack;)Z"))
+    public boolean injectTick(boolean original) {
+		if (!original) {
+			ItemStack inputStack = inventory.getStackInSlot(INPUT_SLOT);
+			ItemStack outputStack = inventory.getStackInSlot(OUTPUT_SLOT);
 
-                    didSomething = true;
-                }
-            }
+			ItemStack inputResultStack = inventory.getStackInSlot(INPUT_RESULT_SLOT);
+			ItemStack outputResultStack = inventory.getStackInSlot(OUTPUT_RESULT_SLOT);
 
-            if (outputStack.is(Items.GLASS_BOTTLE)) {
-                int outAmount = PotionHelper.getBottleAmount();
-                if (contents.getAmount() >= outAmount && PotionHelper.isPotionFluid(contents)) {
-                    ItemStack filledItem = PotionFluidHandler.fillBottle(outputStack, contents);
+			if (PotionFluidHandler.isPotionItem(inputStack)) {
+				FluidStack fluid = PotionFluidHandler.getFluidFromPotionItem(inputStack);
 
-                    drain(outAmount, IFluidHandler.FluidAction.EXECUTE, false);
+				if (contents.isEmpty() || FluidStack.isSameFluidSameComponents(contents, fluid) &&
+						getTankCapacity() - contents.getAmount() >= fluid.getAmount()) {
 
-                    outputStack.shrink(1);
-                    inventory.setStackInSlot(1, filledItem);
+					inputStack.shrink(1);
+					inventory.setStackInSlot(INPUT_SLOT, inputStack);
 
-                    didSomething = true;
-                }
-            }
+					if (inputResultStack.isEmpty()) {
+						inputResultStack = Items.GLASS_BOTTLE.getDefaultInstance();
+					} else {
+						inputResultStack.grow(1);
+					}
 
-            if (didSomething) {
-                cooldownTime = world.getGameTime() + upgradeItem.getTankUpgradeConfig().autoFillDrainContainerCooldown.get();
-            }
-        }
-    }
+					inventory.setStackInSlot(INPUT_RESULT_SLOT, inputResultStack);
 
-    //@Inject(method = "isValidFluidItem(Lnet/minecraft/world/item/ItemStack;Z)Z", at = @At("HEAD"), remap = false, cancellable = true)
-    //public void injectIsValidFluidItem(ItemStack stack, boolean isOutput, CallbackInfoReturnable<Boolean> cir) {
-    //    if ((!isOutput && PotionFluidHandler.isPotionItem(stack) && (contents.isEmpty() ||
-    //            contents.isFluidEqual(PotionFluidHandler.getFluidFromPotionItem(stack)))) ||
-    //            (isOutput && stack.is(Items.GLASS_BOTTLE) && !contents.isEmpty())) {
-    //        cir.setReturnValue(true);
-    //        cir.cancel();
-    //    }
-    //}
+					fill(fluid, IFluidHandler.FluidAction.EXECUTE, false);
+
+					original = true;
+				}
+			}
+
+			if (outputStack.is(Items.GLASS_BOTTLE) && outputResultStack.isEmpty()) {
+				int outAmount = PotionHelper.getBottleAmount();
+				if (contents.getAmount() >= outAmount && PotionHelper.isPotionFluid(contents)) {
+					ItemStack filledItem = PotionFluidHandler.fillBottle(outputStack, contents);
+
+					drain(outAmount, IFluidHandler.FluidAction.EXECUTE, false);
+
+					outputStack.shrink(1);
+					inventory.setStackInSlot(OUTPUT_SLOT, outputStack);
+					inventory.setStackInSlot(OUTPUT_RESULT_SLOT, filledItem);
+
+					original = true;
+				}
+			}
+		}
+
+		return original;
+	}
+	
+	@Mixin(TankComponentItemHandler.class)
+	public static class TankComponentItemHandlerMixin {
+		@Inject(method = "isItemValid", at = @At("HEAD"), remap = false, cancellable = true)
+		public void injectIsValidFluidItem(int slot, ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
+		    if ((slot == 0 && PotionFluidHandler.isPotionItem(stack)) || (slot == 1 && stack.is(Items.GLASS_BOTTLE))) {
+		        cir.setReturnValue(true);
+		        cir.cancel();
+		    }
+		}
+	}
 }
