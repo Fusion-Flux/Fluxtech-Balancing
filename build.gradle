@@ -124,8 +124,8 @@ dependencies {
     implementation("com.tterrag.registrate:Registrate:${registrate_version}")
     implementation("maven.modrinth:protomanlys-weather:0.15.3-alpha")
     implementation("maven.modrinth:create-ironworks:3.9.0")
-    implementation("sophisticatedcore:sophisticatedcore:1.21.1-1.3.64.1090")
-    implementation("sophisticatedbackpacks:sophisticatedbackpacks:1.21.1-3.24.21.1314")
+    //implementation("sophisticatedcore:sophisticatedcore:1.21.1-1.3.64.1090")
+    //implementation("sophisticatedbackpacks:sophisticatedbackpacks:1.21.1-3.24.21.1314")
     //implementation("com.robinfrt.createironworks:create_ironworks-3.9.0-neoforge-1.21.1")
 }
 
