@@ -22,16 +22,52 @@
         "path": "recipe/pressing/copper_ingot.json"
       },
       {
-        "namespace": "create_ironworks",
-        "path": "recipe/materials/plates/tin_sheet.json"
+        "namespace": "onlyhammersandexcavators",
+        "path": "recipe/wooden_hammer.json"
       },
       {
-        "namespace": "create_ironworks",
-        "path": "recipe/materials/plates/bronze_sheet.json"
+        "namespace": "onlyhammersandexcavators",
+        "path": "recipe/wooden_excavator.json"
       },
       {
-        "namespace": "create_ironworks",
-        "path": "recipe/materials/plates/steel_sheet.json"
+        "namespace": "onlyhammersandexcavators",
+        "path": "recipe/stone_hammer.json"
+      },
+      {
+        "namespace": "onlyhammersandexcavators",
+        "path": "recipe/stone_excavator.json"
+      },
+      {
+        "namespace": "onlyhammersandexcavators",
+        "path": "recipe/redstone_hammer.json"
+      },
+      {
+        "namespace": "onlyhammersandexcavators",
+        "path": "recipe/redstone_excavator.json"
+      },
+      {
+        "namespace": "onlyhammersandexcavators",
+        "path": "recipe/lapis_hammer.json"
+      },
+      {
+        "namespace": "onlyhammersandexcavators",
+        "path": "recipe/lapis_excavator.json"
+      },
+      {
+        "namespace": "onlyhammersandexcavators",
+        "path": "recipe/emerald_hammer.json"
+      },
+      {
+        "namespace": "onlyhammersandexcavators",
+        "path": "recipe/emerald_excavator.json"
+      },
+      {
+        "namespace": "onlyhammersandexcavators",
+        "path": "recipe/obsidian_hammer.json"
+      },
+      {
+        "namespace": "onlyhammersandexcavators",
+        "path": "recipe/obsidian_excavator.json"
       }
     ]
   }

@@ -1,0 +1,12 @@
+{
+  "values": {
+    "onlyhammersandexcavators:iron_excavator": "apotheosis:breaker",
+    "onlyhammersandexcavators:gold_excavator": "apotheosis:breaker",
+    "onlyhammersandexcavators:diamond_excavator": "apotheosis:breaker",
+    "onlyhammersandexcavators:netherite_excavator": "apotheosis:breaker",
+    "onlyhammersandexcavators:iron_hammer": "apotheosis:breaker",
+    "onlyhammersandexcavators:gold_hammer": "apotheosis:breaker",
+    "onlyhammersandexcavators:diamond_hammer": "apotheosis:breaker",
+    "onlyhammersandexcavators:netherite_hammer": "apotheosis:breaker"
+  }
+}

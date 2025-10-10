@@ -1,9 +1,9 @@
 package com.fusionflux.fluxtechbalancing;
 
-import com.fusionflux.fluxtechbalancing.items.IronExcavatorItem;
 import com.fusionflux.fluxtechbalancing.items.ResItem;
 import com.fusionflux.fluxtechbalancing.util.ItemRegister;
-import create_ironworks.init.CreateIronworksModItems;
+import com.fusionflux.fluxtechbalancing.util.TinFix;
+import com.simibubi.create.infrastructure.RemapHelper;
 import net.minecraft.world.item.*;
 import org.slf4j.Logger;
 
@@ -52,15 +52,6 @@ public class FluxtechBalancing {
     public static final DeferredItem<Item> DOUBLEBRASS = ITEMS.registerSimpleItem("double_brass", new Item.Properties());
     public static final DeferredItem<Item> SUPERHEATEDBRASS = ITEMS.registerSimpleItem("superheated_brass", new Item.Properties());
 
-    public static final DeferredItem<Item> DOUBLEBRONZE = ITEMS.registerSimpleItem("double_bronze", new Item.Properties());
-    public static final DeferredItem<Item> SUPERHEATEDBRONZE = ITEMS.registerSimpleItem("superheated_bronze", new Item.Properties());
-
-    public static final DeferredItem<Item> DOUBLETIN = ITEMS.registerSimpleItem("double_tin", new Item.Properties());
-    public static final DeferredItem<Item> SUPERHEATEDTIN = ITEMS.registerSimpleItem("superheated_tin", new Item.Properties());
-
-    public static final DeferredItem<Item> DOUBLESTEEL = ITEMS.registerSimpleItem("double_steel", new Item.Properties());
-    public static final DeferredItem<Item> SUPERHEATEDSTEEL = ITEMS.registerSimpleItem("superheated_steel", new Item.Properties());
-
    // public static final DeferredItem<Item> RESITEM = ITEMS.registerSimpleItem("resitem", new Item.Properties().stacksTo(1));
     public static final DeferredItem<ResItem> RESITEM  = ITEMS.registerItem("resitem", ResItem::new, new Item.Properties().stacksTo(1));
 
@@ -75,18 +66,7 @@ public class FluxtechBalancing {
                 output.accept(DOUBLEGOLD.get());
                 output.accept(DOUBLECOPPER.get());
                 output.accept(DOUBLEBRASS.get());
-                output.accept(DOUBLEBRONZE.get());
-                output.accept(DOUBLETIN.get());
-                output.accept(DOUBLESTEEL.get());
                 output.accept(RESITEM.get());
-                output.accept(ItemRegister.IRONEXCAVATOR.get());
-                output.accept(ItemRegister.GOLDENEXCAVATOR.get());
-                output.accept(ItemRegister.DIAMONDEXCAVATOR.get());
-                output.accept(ItemRegister.NETHERITEEXCAVATOR.get());
-                output.accept(ItemRegister.COPPEREXCAVATOR.get());
-                output.accept(ItemRegister.BRASSEXCAVATOR.get());
-                output.accept(ItemRegister.BRONZEEXCAVATOR.get());
-                output.accept(ItemRegister.STEELEXCAVATOR.get());
             }).build());
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -111,8 +91,12 @@ public class FluxtechBalancing {
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
+        //modEventBus.register(EventHandler.class);
+        TinFix.BLOCKS.register(modEventBus);
+        TinFix.ITEMS.register(modEventBus);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
 
 
     }
